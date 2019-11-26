@@ -5,7 +5,7 @@ import { RouteWithLayout } from './components';
 import { Main as MainLayout, Minimal as MinimalLayout } from './layouts';
 
 import {
-    Event as Eventview,
+    Event as EventView,
     EventList as EventListView,
     SignIn as SignInView,
     SignUp as SignUpView,
@@ -26,12 +26,6 @@ const Routes = () => {
 
             {/* page routing in main layout */}
             <RouteWithLayout
-                component={Eventview}
-                exact
-                layout={MainLayout}
-                path="/event"
-            />
-            <RouteWithLayout
                 component={MypageView}
                 exact
                 layout={MainLayout}
@@ -42,6 +36,12 @@ const Routes = () => {
                 exact
                 layout={MainLayout}
                 path="/events"
+            />
+            <RouteWithLayout
+                component={EventView}
+                exact
+                layout={MainLayout}
+                path="/event/:id"
             />
 
             {/* page routing in minimal layout */}
