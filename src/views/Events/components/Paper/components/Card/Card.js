@@ -32,9 +32,6 @@ const Card = props => {
                         参加モザイク: {event.get_mozaic}
                     </Typography>
                 </div>
-                <div className={classes.icon}>
-
-                </div>
             </div>
         </div>
     );
